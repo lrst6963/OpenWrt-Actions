@@ -30,6 +30,7 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
+git clone --depth=1 https://github.com/yichya/luci-app-xray package/luci-app-xray
 git clone --depth=1 https://github.com/philippe44/AirConnect package/airconnect
 git clone --depth=1 https://github.com/sbwml/luci-app-airconnect package/luci-app-airconnect
 #git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
