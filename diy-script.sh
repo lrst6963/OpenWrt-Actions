@@ -30,10 +30,13 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
+git clone https://github.com/xiechangan123/luci-app-xray package/luci-app-xray
+git clone https://github.com/xiechangan123/luci-118n-xray-zh-cn package/luci-118n-xray-zh-cn
 git clone --depth=1 https://github.com/XTLS/Xray-core package/xray-core
-git clone --depth=1 https://github.com/yichya/luci-app-xray package/luci-app-xray
-git clone --depth=1 https://github.com/philippe44/AirConnect package/airconnect
+#git clone --depth=1 https://github.com/yichya/luci-app-xray package/luci-app-xray
+#git clone --depth=1 https://github.com/philippe44/AirConnect package/airconnect
 git clone --depth=1 https://github.com/sbwml/luci-app-airconnect package/luci-app-airconnect
+git clone --depth=1 https://github.com/sbwml/luci-118n-airconnect-zh-cn package/luci-118n-airconnect-zh-cn
 #git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
 #git clone --depth=1 https://github.com/ilxp/luci-app-ikoolproxy package/luci-app-ikoolproxy
