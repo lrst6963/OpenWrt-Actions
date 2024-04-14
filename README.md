@@ -58,15 +58,6 @@
 　└── 网络共享
 </details>
 <details>
-<summary><b>├── VPN</b></summary>
-　├── N2N v2 VPN<br/>
-　├── SoftEther VPN 服务器<br/>
-　├── OpenVPN 服务器<br/>
-　├── PPTP VPN 服务器<br/>
-　├── IPSec VPN 服务器<br/>
-　└── ZeroTier
-</details>
-<details>
 <summary><b>├── 网络</b></summary>
 　├── 接口<br/>
 　├── DHCP/DNS<br/>
