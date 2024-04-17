@@ -37,9 +37,9 @@ git clone --depth=1 https://github.com/sbwml/luci-app-airconnect package/luci-ap
 #git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 #git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 #git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
-#git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser
+git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 #git_sparse_clone openwrt-18.06 https://github.com/immortalwrt/luci applications/luci-app-eqos
-#git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
+# git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
 
 # 科学上网插件
 git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
@@ -116,7 +116,7 @@ find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_U
 find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=@GHCODELOAD/PKG_SOURCE_URL:=https:\/\/codeload.github.com/g' {}
 
 # 取消主题默认设置
-#find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/set luci.main.mediaurlbase/d' {} \;
+find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/set luci.main.mediaurlbase/d' {} \;
 
 # 调整 V2ray服务器 到 VPN 菜单
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/controller/*.lua
