@@ -3,7 +3,7 @@ name: Rockchip OpenWrt
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 20 * * *
+    - cron: 0 22 * * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -112,7 +112,6 @@ jobs:
         chmod +x $DIY_SCRIPT
         cd $OPENWRT_PATH
         $GITHUB_WORKSPACE/$DIY_SCRIPT
-        $GITHUB_WORKSPACE/scripts/preset-clash-core.sh $CLASH_KERNEL
         $GITHUB_WORKSPACE/scripts/preset-terminal-tools.sh
 
     - name: Download DL Package
