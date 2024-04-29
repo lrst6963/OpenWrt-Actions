@@ -31,7 +31,7 @@ function git_sparse_clone() {
 
 # 添加额外插件
 git clone --depth=1 https://github.com/sbwml/luci-app-airconnect package/luci-app-airconnect
-git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
+#git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 #git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 #git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
 #git clone --depth=1 https://github.com/ilxp/luci-app-ikoolproxy package/luci-app-ikoolproxy
@@ -41,7 +41,7 @@ git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebro
 #git_sparse_clone openwrt-18.06 https://github.com/immortalwrt/luci applications/luci-app-eqos
 
 # 科学上网插件
-git clone --depth=1 -b master https://github.com/fw876/helloworld package/luci-app-ssr-plus
+git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
