@@ -1,0 +1,6 @@
+
+config airconnect 'config'
+	option aircast '1'
+	option airupnp '1'
+	option enabled '1'
+	option interface 'eth1'
