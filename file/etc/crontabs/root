@@ -1,5 +1,0 @@
-59 23 * * 6 /etc/init.d/ddns restart #定时重启DDNS
-56 23 * * * docker restart nextcloud #定时重启nextcloud 
-10 * * * * /usr/share/shadowsocksr/ssrplusupdate.sh
-3 3 12 12 * /usr/bin/nginx-util 'check_ssl'
-55 23 * * 6 sleep 5 && touch /etc/banner && reboot
