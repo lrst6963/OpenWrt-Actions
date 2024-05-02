@@ -1,4 +1,4 @@
-name: Rockchip OpenWrt 6.6
+name: Rockchip OpenWrt-6.6
 
 on:
   workflow_dispatch:
