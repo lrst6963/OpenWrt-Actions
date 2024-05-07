@@ -3,10 +3,6 @@
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.12.12/g' package/base-files/files/bin/config_generate
 
-# 修改默认时区
-sed -i "s/timezone='.*'/timezone='CST-8'/g" $CFG_FILE
-sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" $CFG_FILE
-
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
   branch="$1" repourl="$2" && shift 2
@@ -30,9 +26,6 @@ git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app
 # Themes
 #git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
 #git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-
-# 更改 Argon 主题背景
-#cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
 # iStore
 #git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
