@@ -30,8 +30,8 @@ git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app
 #git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
 # iStore
-#git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
-#git_sparse_clone main https://github.com/linkease/istore luci
+git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
+git_sparse_clone main https://github.com/linkease/istore luci
 
 # x86 型号只显示 CPU 型号
 #sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
