@@ -14,8 +14,8 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: configs/MTK7621.config
-  DIY_P1_SH: MTK7621-DIY/diy-part1.sh
-  DIY_P2_SH: MTK7621-DIY/diy-part2.sh
+  DIY_P1_SH: DIY/mtk1.sh
+  DIY_P2_SH: DIY/mtk2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
