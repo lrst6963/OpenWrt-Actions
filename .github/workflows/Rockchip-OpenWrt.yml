@@ -12,7 +12,6 @@ env:
   EXTRA_CONFIG: configs/extra.config
   DIY_SCRIPT: diy-script.sh
   CACHE_TOOLCHAIN: true
-  UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
   FIRMWARE_TAG: Rockchip
   TZ: Asia/Shanghai
@@ -58,7 +57,7 @@ jobs:
         temp-reserve-mb: 100
         root-reserve-mb: 1024
 
-    - name: Checkout
+    - name: 结帐
       uses: actions/checkout@main
 
     - name: 克隆源代码
@@ -136,13 +135,6 @@ jobs:
       if: (!cancelled())
       run: df -hT
 
-    - name: 上传 Bin Directory
-      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
-      uses: actions/upload-artifact@main
-      with:
-        name: ${{ env.SOURCE_REPO }}-bin-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}-${{ env.FILE_DATE }}
-        path: ${{ env.OPENWRT_PATH }}/bin
-
     - name: 整理文件
       if: steps.compile.outputs.status == 'success'
       run: |
@@ -154,13 +146,6 @@ jobs:
         rm -rf packages feeds.buildinfo version.buildinfo
         echo "KERNEL=$(cat *.manifest | grep ^kernel | cut -d- -f2 | tr -d ' ')" >> $GITHUB_ENV
         echo "FIRMWARE_PATH=$PWD" >> $GITHUB_ENV
-
-    - name: 将固件上传到Artifact
-      if: steps.compile.outputs.status == 'success' && env.FIRMWARE_RELEASE != 'true'
-      uses: actions/upload-artifact@main
-      with:
-        name: ${{ env.SOURCE_REPO }}-firmware-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}-${{ env.FILE_DATE }}
-        path: ${{ env.FIRMWARE_PATH }}
 
     - name: 将固件上传到Release
       if: steps.compile.outputs.status == 'success' && env.FIRMWARE_RELEASE == 'true'
@@ -181,7 +166,7 @@ jobs:
           - 🌐 默认地址: 192.168.12.12
           - 🔑 默认密码: password
           ### 🧊 固件版本
-          - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
+          - 主源码更新记录
           - ${{ env.COMMIT_AUTHOR }}
           - ${{ env.COMMIT_DATE }}
           - ${{ env.COMMIT_MESSAGE }}
