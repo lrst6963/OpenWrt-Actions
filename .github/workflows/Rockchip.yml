@@ -8,9 +8,9 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: configs/rockchip.config
-  EXTRA_CONFIG: configs/extra.config
-  DIY_SCRIPT: DIY/Rockchip.yml
+  CONFIG_FILE: rockchip/rockchip.config
+  EXTRA_CONFIG: rockchip/extra.config
+  DIY_SCRIPT: rockchip/diy.yml
   CACHE_TOOLCHAIN: true
   FIRMWARE_RELEASE: true
   FIRMWARE_TAG: Rockchip
