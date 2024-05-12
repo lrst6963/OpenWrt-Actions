@@ -60,7 +60,7 @@ jobs:
         CONFIG_FILE: 'mtk-7621/mtk-7621.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x ./mtk-7621/diy.sh && ./diy.sh
+        chmod +x ./mtk-7621/diy.sh && ./mtk-7621/diy.sh
         cd openwrt && make defconfig
         
     - name: 下载包
