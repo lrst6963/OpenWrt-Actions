@@ -57,10 +57,10 @@ jobs:
     
     - name: 配置定制
       env:
-        CONFIG_FILE: 'MTK-7621/MTK-7621.config'
+        CONFIG_FILE: 'mtk-7621/mtk-7621.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x ./MTK-7621/diy.sh && ./diy.sh
+        chmod +x ./mtk-7621/diy.sh && ./diy.sh
         cd openwrt && make defconfig
         
     - name: 下载包
