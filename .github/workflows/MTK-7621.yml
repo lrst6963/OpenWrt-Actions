@@ -76,5 +76,21 @@ jobs:
     - name : 上传固件
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt
+        name: MTK-7621
         path: openwrt/bin
+
+   - name: 将固件上传到Release
+      uses: actions/release-action@master
+      with:
+        name: MTK-7621
+        allowUpdates: true
+        tag: MTK-7621
+        token: ${{ secrets.GITHUB_TOKEN }}
+        body: |
+          ### 📒 固件信息
+          - 💻 平台架构: MTK-7621
+          - ⚽ 固件源码: ${{ env.REPO_URL }}
+          - 💝 源码分支: ${{ env.REPO_BRANCH }}
+          - 🚀 内核版本: ${{ env.KERNEL }}
+          - 🌐 默认地址: 192.168.12.1
+          - 🔑 默认密码: password
