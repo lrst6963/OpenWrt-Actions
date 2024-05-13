@@ -79,7 +79,7 @@ jobs:
         name: MTK-7621
         path: openwrt/bin
 
-   - name: 将固件上传到Release
+    - name: 将固件上传到Release
       uses: actions/release-action@master
       with:
         name: MTK-7621
