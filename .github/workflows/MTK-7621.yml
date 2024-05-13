@@ -83,6 +83,7 @@ jobs:
       uses: actions/release-action@master
       with:
         name: MTK-7621
+        allowUpdates: true
         tag: MTK-7621
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
