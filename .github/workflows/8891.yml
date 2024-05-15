@@ -1,4 +1,4 @@
-name: Rockchip
+name: 7981
 
 on:
   workflow_dispatch:
