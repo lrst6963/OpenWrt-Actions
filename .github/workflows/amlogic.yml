@@ -6,7 +6,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: amlogic/mtk.config
+  CONFIG_FILE: amlogic/amlogic.config
   EXTRA_CONFIG: amlogic/extra.config
   DIY_SCRIPT: amlogic/diy.sh
   CACHE_TOOLCHAIN: true
