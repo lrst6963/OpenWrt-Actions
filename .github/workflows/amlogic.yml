@@ -1,4 +1,4 @@
-name: MTK-7620
+name: amlogic
 
 on:
   workflow_dispatch:
@@ -6,12 +6,12 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: mtk-7620/mtk.config
-  EXTRA_CONFIG: mtk-7620/extra.config
-  DIY_SCRIPT: mtk-7620/diy.sh
+  CONFIG_FILE: amlogic/mtk.config
+  EXTRA_CONFIG: amlogic/extra.config
+  DIY_SCRIPT: amlogic/diy.sh
   CACHE_TOOLCHAIN: true
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: MTK-7620
+  FIRMWARE_TAG: amlogic
   TZ: Asia/Shanghai
 
 jobs:
