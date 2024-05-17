@@ -2,7 +2,8 @@ name: MTK-7981
 
 on:
   workflow_dispatch:
-
+  schedule:
+    - cron: 0 20 * * 1
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
