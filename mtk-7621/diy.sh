@@ -18,9 +18,8 @@ function git_sparse_clone() {
 # 添加额外插件
 git clone --depth=1 https://github.com/sbwml/luci-app-airconnect package/luci-app-airconnect
 
-# iStore
-git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
-git_sparse_clone main https://github.com/linkease/istore luci
+# 科学上网插件
+git clone --depth=1 https://github.com/fw876/helloworld package/luci-app-ssr-plus
 
 # 修改本地时间格式
 sed -i 's/os.date()/os.date("%Y-%m-%d %H:%M:%S")/g' package/lean/autocore/files/*/index.htm
